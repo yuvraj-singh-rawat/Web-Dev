@@ -1,0 +1,25 @@
+/* 1. Named Color */
+h1 {
+    color: red;
+}
+
+/* 2. Hexadecimal Colors */
+h2 {
+    color: #ff20ff; 
+}
+
+h3 {
+    background-color: #FF000040;
+}
+
+/* 3. RGBA Colors  */
+
+p {
+    color: rgba(255, 70, 100, 0.8);
+}
+
+
+/* 4. HSLA Colors  */
+span {
+    color: hsla(0, 100%, 50%, 50%);
+}

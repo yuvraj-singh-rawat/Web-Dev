@@ -1,0 +1,20 @@
+h1 {
+    background-color: red;
+    color: yellow;
+}
+
+p {
+    color: black;
+    background-color: palegreen;
+}
+
+#container {
+    border: 1px solid black;
+    width: 700px;
+    height: 400px;
+    background-image: url(https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=);
+    background-repeat: no-repeat;
+    /* background-size: auto; original size */
+    background-size: cover; /* cover available space */
+    /* background-size: contain; fit size */
+}

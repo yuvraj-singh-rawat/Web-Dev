@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2nd Step of Animation */
+.container {
+  width: 100px;
+  height: 100px;
+  background-color: lightgreen;
+
+
+  /* animation: name duration timing-function delay iteration-count direction fill-mode */
+  animation: yuvraj 3s ease-in-out 0s infinite normal backwards;
+
+  /* animation-name: yuvraj;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: 5;
+  animation-direction: reverse; 
+  animation-fill-mode: forwards;
+  */
+
+}
+
+/* 1st Step of Animation */
+@keyframes yuvraj {
+  0% {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+  }
+
+  50% {
+    background-color: red;
+    width: 400px;
+    height: 400px;
+  }
+
+  100% {
+    background-color: green;
+    width: 800px;
+    height: 800px;
+  }
+
+}

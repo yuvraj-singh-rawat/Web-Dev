@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    transition-property: all; 
+
+    /* translate(x, y) it moves element from current position to x axis and y axis */
+    /* transform: translate(150px, 300px);  */
+
+    /* transform: rotate(90deg); */
+
+    /* transform: scale(2, 5); */
+
+    /* transform: skew(20deg, 40deg); */
+
+    /* transform: matrix(6); */
+
+    /* transform: rotateZ(150deg); */
+
+    /* transform: perspective(100px); */
+
+
+}
+
+.box:hover {
+    /* width: 500px; */
+    /* height: 500px; */
+    /* background-color: green; */
+    
+    /* transition: 1s; */
+    /* transition-duration: 2s; */
+    /* transition-timing-function: ease-in; */
+    /* transition-timing-function: ease-out; */
+
+    /* transition-timing-function: cubic-bezier(0.17, 0.84, 0.88, -0.31); */
+    /* transition-timing-function: ease-in-out; */
+
+    /* transition: property duration timing-function delay */
+    /* transition: width 5s ease-in-out 0.5s; */
+    /* transition-delay: 5s; */
+}

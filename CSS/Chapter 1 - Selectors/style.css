@@ -1,0 +1,80 @@
+/* CSS - Cascading Style Sheet */
+
+/* Selectors 
+
+1. tag/element selector
+2. class selector - dot .
+3. id selector - hash #
+4. div selector
+5. paragraph selector
+6. psuedo selector
+*/
+
+/* 1. Tag Selector */
+h3 {
+    color: red;
+    background-color: pink;
+}
+
+/* 2. Class Selector */
+.head5 {
+    background-color: black;
+    color: white;
+    font-size: larger;
+}
+
+.container {
+    background-color: yellow;
+}
+
+/* 3. id Selector  */
+#head4 {
+    background-color: yellow;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* 4. Div Selector  */
+div.diva {
+    background-color: sienna;
+    color: rgb(0, 255, 102);
+}
+
+/* 5. Paragrah Selector  */
+p {
+    background-color: rgb(144, 99, 60);
+    color: rgb(26, 255, 255);
+}
+
+/* 6. Psuedo (:) Selector  */
+
+.container:hover {
+    background-color: goldenrod;
+}
+
+ul li:nth-child(5) {
+    background-color: red;
+}
+
+ul li:nth-last-child(1) {
+    background-color: black;
+}
+
+ul li:nth-last-of-type(2n + 1) {
+    background-color: lightblue;
+}
+
+
+ul li:nth-of-type(2n) {
+    background-color: wheat;
+}
+
+ul li:hover {
+    background-color: purple;
+    color: white;
+}
+
+/* 7. Group Selector  */
+h1, h2, p {
+    background-color: rgb(229, 184, 95);
+}

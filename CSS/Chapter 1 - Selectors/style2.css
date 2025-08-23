@@ -1,0 +1,105 @@
+/* 1. Pseudo Class Selector */
+
+button:hover {
+    background-color: powderblue;
+}
+
+/* When we click on the input  */
+button:focus {
+    background-color: yellow;
+}
+
+/* when clicked on link  */
+button:visited {
+    color: red;
+}
+
+/* when element is active  */ 
+button:active {
+    background-color: white;
+    color: darkgoldenrod;
+    font-weight: 800;
+}
+
+/* parent child pseudo classes */
+li:first-child {
+    color: blue;
+}
+
+li:last-child {
+    color: coral;
+}
+
+li:nth-child(2n) {
+    background-color: wheat;
+}
+
+li:nth-last-child(2n + 2) {
+    background-color: yellowgreen;
+}
+
+li:nth-of-type(3n) {
+    color: green;
+}
+
+/* input:hover {
+    border: 20px solid rgb(185, 185, 185);
+}
+
+input:disabled {
+    background-color: lightcoral;
+}
+
+input:enabled {
+    background: wheat;
+} */
+
+
+/* 2. Pseudo Element Selector  */
+p::before {
+    content: "👉 ";
+}
+
+p::after {
+    content: " ✅";
+}
+
+p::first-letter {
+    font-size: x-large;
+}
+
+p::first-line {
+    color: red;
+}
+
+p::selection {
+    background-color: yellow;
+    color: black;
+}
+
+/* input::placeholder {
+    background-color: lightslategrey;
+    color: white;
+} */
+
+div#new p {
+    background-color: rgb(238, 205, 205);
+    color: white;
+}
+
+/* Adjacent Sibling Selector */
+/* h1 + span {
+    background-color: antiquewhite;
+} */
+
+
+/* General Sibling Selector */
+h1 ~ span {
+    background-color: chartreuse;
+}
+
+
+/* Attribute Selector  */
+input[type="text"] {
+    background-color: hotpink;
+}

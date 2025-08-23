@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* box-sizing: content-box; */
+}
+
+.box1 {
+    box-sizing: content-box;
+    width: 300px;
+    border: 5px solid black;
+    /* border-radius: 10px; */
+    padding: 10px;
+
+    /* padding: 10px 20px 30px 40px; */
+    /* Top, Right, Bottom, Left */
+
+    margin: 30px 20px;
+    /* Top-Bottom, Right-Left */
+
+    /* margin: 1px 1px 10px; */
+    /* Top, Left/Right, Bottom  */
+}
+
+.box2 {
+    box-sizing: border-box;
+    width: 300px;
+    border: 5px solid black;
+    /* border-radius: 10px; */
+    padding: 10px;
+    
+    /* padding: 10px 20px 30px 40px; */
+    /* Top, Right, Bottom, Left */
+
+    margin: 50px 20px;
+}
+
+/* total width = 
+    content width + 
+    border + 
+    padding + 
+    margin */
+
+/* 
+total width = 
+    200px (content box) + 
+    (5px + 5px) border + 
+    (20px + 20px) padding + 
+    (10px + 10px) margin
+
+= 200 + 40 + 10 + 20 + 20
+= 290px
+*/
+
+
