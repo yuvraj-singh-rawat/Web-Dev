@@ -15,14 +15,14 @@ const car = {
     model: "Phantom",
     color: "Black",
     year: 2028,
-    country: { 
+    country: {
         n1: "india",
         n2: "usa",
         n3: "uk",
         n4: "uae"
     },
     sure: true,
-    start: function() {
+    start: function () {
         console.log("Bhun Bhun!!!!");
     }
 };
@@ -97,16 +97,16 @@ const assigned = Object.assign({}, person, cars);
 console.log(assigned);
 
 // Spread Operator shortcut of Object.assign
-const copy = {...person};
+const copy = { ...person };
 console.log(copy);
 
 
 // Optional Chaining (?).
 // if any property has undefined path, then no error thrown
-const user = { 
-    name: "Yuvraj", 
-    address: { 
-        city: "Ajmer" 
+const user = {
+    name: "Yuvraj",
+    address: {
+        city: "Ajmer"
     }
 };
 
@@ -128,8 +128,8 @@ console.log(finalAge); // 18
 // Object.freeze(obj)
 // make object immutable
 
-const settings = { 
-    darkMode: true 
+const settings = {
+    darkMode: true
 };
 Object.freeze(settings);
 
@@ -141,8 +141,8 @@ console.log(settings.darkMode); // true
 // Object.seal(obj)
 // can update values but can't add new keys or delete
 
-const persons = { 
-    name: "Yuvraj" 
+const persons = {
+    name: "Yuvraj"
 };
 Object.seal(persons);
 
@@ -153,7 +153,7 @@ delete persons.name;         // ❌ not allowed
 
 
 
-let a1 = {value: 12};
+let a1 = { value: 12 };
 let b1 = a1;
 b1.value = 20;
 // console.log(b1); // 20
@@ -170,13 +170,26 @@ b1.value = 20;
 
 let movie = {
     title: "KGF",
-    year: 2018
+    year: 2018,
+    actor: "Yash"
 };
 
-let {title, year} = movie;
+// Access Value Type
 
-// console.log(title); // KGF
-// console.log(year); // 2018
+// 1. Dot Notation
+console.log(movie.title); // KGF
+console.log(movie.year); // 2018
+
+// 2. Bracket Notation
+console.log(movie["actor"]); // Yash
+console.log(movie["title"]); // KGF
+
+// 3. Destructring
+let { title, year, actor } = movie;
+
+console.log(title); // KGF
+console.log(year); // 2018
+console.log(actor); // Yash
 
 
 
@@ -201,7 +214,7 @@ console.log(city); // Delhi
 
 
 // Rest Operator (...)
-const {name, ...rest} = user;
+const { name, ...rest } = user;
 
 console.log(name);
 console.log(rest);
@@ -214,7 +227,7 @@ console.log(rest);
 // Clone Objects
 
 let c = Object.assign({}, movie);
-let d = {...movie};
+let d = { ...movie };
 
 // console.log(c);
 // console.log(d);
@@ -338,14 +351,14 @@ class Parent {
     }
 }
 
-class Child extends Parent {}
+class Child extends Parent { }
 
 // another 
 
 class Person {
     eat() {
         console.log("eat");
-    } 
+    }
 
     sleep() {
         console.log("sleep")
@@ -434,3 +447,19 @@ try {
 } catch (err) {
     console.log(err);
 }
+
+
+
+
+const obj1 = {
+    a: 1,
+    b: 2
+};
+
+const obj2 = {
+    c: "Hello",
+    d: "Developers"
+};
+
+const res = { ...obj1, ...obj2 };
+console.log(res);

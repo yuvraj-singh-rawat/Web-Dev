@@ -5,8 +5,15 @@ function greet() {
     console.log("Hello World");
 }
 
-greet();
+greet(); // Hello World
 
+
+// Function Expression => When we Declare Function in Variable
+const num = function (num1, num2) {
+    console.log(num1 + num2);
+}
+
+num(15, 10); // 25
 
 // 2. Arrow Function
 const add = (a, b) => { // parameters
@@ -29,10 +36,10 @@ greet(); // Hello Guest
 // 4. Rest Parameter 
 
 function sumAll(...nums) {
-    return nums.reduce((a,b) => a+b, 0);
+    return nums.reduce((a, b) => a + b, 0);
 }
 
-console.log(sumAll(1,2,3,4,5,6)); // 21
+console.log(sumAll(1, 2, 3, 4, 5, 6)); // 21
 
 
 
@@ -53,7 +60,29 @@ console.log(sumAll(1,2,3,4,5,6)); // 21
 //     console.log("Bye!");
 // }
 
-// sayHello("Yuvraj", sayBye);
+// sayHello("Yuvraj", sayBye); // Hi Yuvraj Bye!
+
+
+
+// Another Example
+
+// const doSomething = function (callback) {
+//     console.log("Your File is Downloading......")
+//     setTimeout(function() {
+//         callback();
+//     }, 5000);
+// };
+
+// const callback = function() {
+//     console.log("Your File is Downloaded!")
+// };
+
+// doSomething(callback);
+
+
+
+
+
 
 
 
@@ -70,7 +99,7 @@ console.log(sumAll(1,2,3,4,5,6)); // 21
 //             console.log("Task 3...");
 //             setTimeout(() => {
 //                 console.log("Task 4...");
-//             });
+//             }, 5000);
 //         }, 1000);
 //     }, 1000);
 // }, 5000)
@@ -82,18 +111,87 @@ console.log(sumAll(1,2,3,4,5,6)); // 21
 
 
 
-// High Order Functions
 
-// function greetUser(name, callback) {
-//     console.log("Hello " + name);
-//     callback();
+
+
+
+
+
+// High Order Functions -> functions who takes another functions as an arguments(callback), return a function as its result.
+
+// function greet(name) {
+//     return `Hello ${name}`;
 // }
 
-// function sayBye() {
-//     console.log("Bye!");
+// function process(callback) { // Process is HOF it takes greet as an Argument
+//     let name = "Yuvraj";
+//     return callback(name);
 // }
 
-// greetUser("Yuvraj", sayBye);
+// console.log(process(greet)); // Hello Yuvraj
+
+
+
+
+// Example 
+
+const radius = [1, 2, 3, 4];
+
+// const area = function (radiusArray) {
+//     const result = [];
+//     for (let i = 0; i < radiusArray.length; i++) {
+//         const a = Math.PI * radiusArray[i] * radiusArray[i];
+//         result.push(a);
+//     }
+//     return result;
+// }
+
+// const ans = area(radius);
+// console.log(ans);
+
+// const circumference = function (radiusArray) {
+//     const result = [];
+//     for (let i = 0; i < radiusArray.length; i++) {
+//         const a = 2 * Math.PI * radiusArray[i];
+//         result.push(a);
+//     }
+//     return result;
+// }
+
+// const ans2 = circumference(radius);
+// console.log(ans2);
+
+
+// Better Way to Write Above Code in Higher Order Function
+
+// const formulaOfArea = function (r) {
+//     return Math.PI * r * r;
+// }
+
+// const formulaOfCircumference = function (r) {
+//     return 2 * Math.PI * r;
+// }
+
+// const calculate = function (radiusArray, formula) {
+//     const result = [];
+
+//     for (let i = 0; i < radiusArray.length; i++) {
+//         const a = formula(radiusArray[i]);
+//         result.push(a);
+//     }
+//     return result;
+// }
+
+// const ans3 = calculate(radius, formulaOfArea);
+// const ans4 = calculate(radius, formulaOfCircumference);
+// console.log(ans3);
+// console.log(ans4);
+
+
+
+
+
+
 
 
 
@@ -105,7 +203,7 @@ console.log(sumAll(1,2,3,4,5,6)); // 21
 
 
 // setTimeout() Function
- 
+
 // setTimeout(function() {
 //     console.log("after 2 seconds");
 // }, 2000); // 2000 means 2 seconds
@@ -117,12 +215,12 @@ console.log(sumAll(1,2,3,4,5,6)); // 21
 
 
 
-// Stop Timeout 
+// Stop Timeout
 
 // const id = setTimeout(() => {
 //     console.log("This will never run");
 // }, 5000);
-    
+
 // clearTimeout(id);
 
 
@@ -136,7 +234,7 @@ console.log(sumAll(1,2,3,4,5,6)); // 21
 
 // setInterval(() => {
 //     console.log("runs in every 1 seconds");
-// }, 1000); 
+// }, 1000);
 
 
 
@@ -169,13 +267,13 @@ console.log(sumAll(1,2,3,4,5,6)); // 21
 
 
 // Asynchronous Behavior
-console.log("Start");
+// console.log("Start");
 
-setTimeout(() => {
-  console.log("Inside setTimeout"); // execute at last
-}, 0);
+// setTimeout(() => {
+//     console.log("Inside setTimeout"); // execute at last
+// }, 0);
 
-console.log("End");
+// console.log("End");
 
 
 
@@ -244,8 +342,30 @@ console.log("End");
 //     let result = await download();
 //     console.log(result);
 //     console.log("finosh");
-    
-    
+
+
 // }
 
 // start();
+
+
+
+
+
+
+
+
+// Spread Operator in Functions
+// function sum(a, b, c, d, e) {
+//     return a + b + c + d + e;
+// }
+
+// function sum(...numbers) {
+//     let sum = 0;
+//     for (let i = 0; i < numbers.length; i++) {
+//         sum += number[i];
+//     }
+//     return sum;
+// }
+
+// console.log(sum(1, 2, 3, 4, 5)); // 15

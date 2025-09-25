@@ -737,3 +737,19 @@ console.log(n); // 10
 // s = 10; // gives error
 // let s = 10;
 // console.log(s);
+
+
+// Template Literals
+
+const agee = 23;
+const fName = "Yuvraj Singh";
+
+console.log("Hello Mr" + fName + "Your Age is: " + agee);
+console.log(`Hello Mr ${fName} Your Age is: ${agee}`);
+
+// Q. Print sum of two numbers
+const a1 = 10;
+const b1 = 20;
+
+console.log("Sum of " + a1 + "and" + b1 + "is: " + a + b); // 1020
+console.log(`Sum of ${a1} and ${b1} is ${a + b}`); // 30

@@ -8,6 +8,7 @@ function saveData() {
         age: age
     };
 
+    // to save in localstorage
     localStorage.setItem("userData", JSON.stringify(user));
     alert("Data saved to localStorage!");
 }
@@ -26,5 +27,6 @@ function loadData() {
 
 function clearData() {
     localStorage.removeItem("userData");
+    // localStorage.clear();
     document.getElementById("output").innerText = "Data cleared!";
 }

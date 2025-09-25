@@ -69,21 +69,21 @@
 
 // Async Await Function
 
-function api() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("weather data");
-            resolve("✅ Data fetched!");
-        }, 2000);
-    });
-}
+// function api() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("weather data");
+//             resolve("✅ Data fetched!");
+//         }, 2000);
+//     });
+// }
 
-async function getWeatherData() {
-    await api(); // 1st
-    await api(); // 2nd
-};
+// async function getWeatherData() {
+//     await api(); // 1st
+//     await api(); // 2nd
+// };
 
-getWeatherData();
+// getWeatherData();
 
 
 
@@ -129,3 +129,41 @@ getWeatherData();
 // (function () {
 //     console.log("abc");
 // }) ();
+
+
+
+
+
+
+
+
+
+// Github API
+const githubAPI = "https://api.github.com/users/yuvraj-singh-rawat";
+
+const fetchData = async () => {
+    try {
+        const res = await fetch(githubAPI);
+        const jsonData = await res.json();
+        console.log(jsonData)
+    } catch (error) {
+        console.log(error);
+    } finally {
+        console.log("Always Runs....")
+    }
+}
+
+fetchData();
+
+
+
+
+
+
+
+
+// Custom Error
+const myError = new Error("This is my error");
+console.log(myError);
+
+throw new Error("Something went wrong....");

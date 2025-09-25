@@ -218,7 +218,7 @@
 //     { id: 1, name: 'Yuvraj' },
 //     { id: 2, name: 'Rawat' },
 // ];
-  
+
 // const found = users.find(user => user.id === 2);
 // console.log(found); // { id: 2, name: 'Rawat' }
 
@@ -263,3 +263,116 @@
 // const hasPassed = marks.some(mark => mark > 40);
 // console.log(hasPassed); // true
 
+
+
+
+// Array Destructuring
+
+// const arr = [1, 2, 3, 4, 5];
+
+// console.log(arr[1]); // 2
+// console.log(arr[2]); // 3
+
+// const [a, b, c, d, e] = arr;
+// console.log(a); // 1
+// console.log(b); // 2
+
+
+// Make a Duplicate Array
+// const arr = [1, 2, 3];
+// const duplicateArr = [...arr, 4, 5, 6, "Apple", "Banana"];
+// console.log(duplicateArr)
+
+// // Q. Merge two arrays
+// const num1 = [1, 2, 3, 4, 5];
+// const num2 = [6, 7, 8, 9, 10];
+
+// const answer = [...num1, ...num2];
+// console.log(answer);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Array (Map, Filter, Reduce)
+// const arr = [10, 20, 30, "Apple", true, "banana"];
+// console.log(arr);
+// arr.push("Orange");
+// console.log(arr);
+// arr.unshift("start");
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//     console.log(element);
+// }
+
+// Map
+// const newArray = arr.map((element) => {
+//     return element;
+// });
+
+// console.log(newArray);
+
+// const product = [
+//     {
+//         price: 1200,
+//         name: "iPhone"
+//     }, {
+//         price: 1500,
+//         name: "Hp"
+//     }, {
+//         price: 2000,
+//         name: "Lenovo"
+//     },
+// ];
+
+// product.map((element) => {
+//     console.log(element.name, element.price)
+// })
+
+
+
+
+
+// Filter
+// const arr = [10, 20, 30, 40, 50];
+
+// const res = arr.filter((element) => {
+//     return element >= 30; // [30, 40, 50]
+// });
+
+// console.log(res);
+
+
+
+
+
+// Reduce 
+
+const arr = [10, 20, 30, 40, 50];
+
+function sumOfElement(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+
+console.log(sumOfElement(arr));
+
+const ans = arr.reduce((accumulator, element) => {
+    return accumulator + element;
+}, 0); // 0+10 10+20 30+30 60+40 100+50 150
+
+console.log(ans); // 150
